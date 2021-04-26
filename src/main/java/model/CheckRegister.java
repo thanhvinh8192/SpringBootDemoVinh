@@ -1,6 +1,6 @@
-package controller;
+package model;
 
-public interface ValidInput {
+public interface CheckRegister {
     boolean checkPhoneNumber(String phoneNumber);
     boolean checkPassword(String password);
     boolean checkEmail(String email);

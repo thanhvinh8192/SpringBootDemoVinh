@@ -1,11 +1,12 @@
-package controller;
+package model;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter @Getter
-public class User implements ValidInput {
+public class User implements CheckRegister {
     private String phoneNumber;
+    private String userName;
     private String password;
     private String email;
 
@@ -28,11 +29,13 @@ public class User implements ValidInput {
 
     @Override
     public boolean checkPassword(String password) {
-        return password.length() >= 8;
+        if (password.length() >= 8) return true;
+        else return false;
     }
 
     @Override
     public boolean checkEmail(String email) {
-        return email.endsWith("@gmail.com");
+        if (!email.endsWith("@gmail.com")) return true;
+        else return false;
     }
 }
