@@ -1,4 +1,4 @@
-package model;
+package controller.request;
 
 public interface CheckRegister {
     boolean checkPhoneNumber(String phoneNumber);
